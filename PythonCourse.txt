@@ -1,0 +1,96 @@
+# Common List methods
+
+
+my_list = [34,76,58]
+#print (my_list)
+my_list.append(100)
+#print (my_list)
+my_list.remove(34)
+#print (my_list)
+#print(my_list.index(100))
+#my_list.reverse()
+#print (my_list)
+my_list.extend([67,68,69])
+print (my_list)
+
+user_input = int(input('Please enter ages of class members. Type -1 to end.'))
+ages = []
+while user_input > 0:
+    ages.append(user_input)
+    user_input = int(input('The next age:>'))
+print('The ages are', ages)
+
+
+count = 0
+class_names = []
+name = input('Please enter name, type "n" to stop:> ')
+while name != 'n':
+    count += 1
+    class_names.append(name)
+    print(f'{name} has been added.')
+    name = input ('Next name?:> ')
+
+print(f'There are {count}) people in the class, they are {class_names}')
+
+count = 0
+class_names = []
+name = input('Please enter name:> ')
+while name != 'n':
+    count += 1
+    class_names.append(name)
+    print(f'{name} has been added.')
+    name = input ('Next name?:> ')
+
+print(f'There are {count}) people in the class, they are {class_names}')
+
+
+# Modulus
+
+#print(10 % 2)
+
+#print(11%2)
+
+print(10 % 4)
+
+
+#Fizzbuzz
+
+n = 100
+
+for i  in range(1,n+1):
+    if i%3 == 0 and i%5 ==0:
+        print(i, 'Fizzbuzz!!!')
+    elif i%5 == 0:
+        print(i,'Buzz')
+    elif i%3 == 0:
+        print(i,'Fizz')
+    else:
+        print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

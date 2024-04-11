@@ -1,0 +1,40 @@
+# IF statement
+some_condition = False
+
+if some_condition:
+    print('The variable \'some_condition\' is True')
+else:
+    print('The variable \'some_condition\' is False')
+
+
+# What should I wear?
+
+temp = int(input('Please enter the temperature in Celsius. \
+An integer between 0-40:>>> '))
+
+if temp > 30:
+    print('Wear short and sun cream!')
+elif temp <= 30 and temp > 20:
+    print('It\'s warm, but not shorts weather!')
+elif temp <= 20 and temp >10:
+    print('You\'ll probably need a vest today!')
+else:
+    print('Too cold! Don\'t go out!')
+
+-----------
+# Strings #
+-----------
+
+my_string = 'Python'
+#len (my_string)
+#my_string [0]
+#my_string [1]
+
+# string slicing technique#
+
+#my_string [0:4]
+my_string [:4]
+#my_string [-1]
+#letter = my_string[4]
+
+#my_string.upper()

@@ -1,0 +1,333 @@
+my_string = 'Python'
+#len(my_string)
+#my_string[0]
+#my_string[1]
+#my_string[0:4]
+#my_string[:4]
+#my_string[-1]
+#letter = my_string[4]
+#my_string.upper()
+#my_string.lower()
+
+
+----
+EX01
+----
+
+user_input = int(input('Please key in a number between 1 and 5:>>> '))
+if user_input == 1:
+    print('one')
+elif user_input == 2:
+    print('two')
+elif user_input == 3:
+    print('three')
+elif user_input == 4:
+    print('four')
+elif user_input ==5:
+    print('five')
+else:
+    print('Entry out of range, please select number between 1 and 5')
+
+
+----
+EX02
+----
+
+user_input = input('Please key in a string value between one and five:>>> ')
+user_input = user_input.lower()
+if user_input == 'one':
+    print(1)
+elif user_input == 'two':
+    print(2)
+elif user_input == 'three':
+    print(3)
+elif user_input == 'four':
+    print(4)
+elif user_input == 'five':
+    print(5)
+else:
+    print('Entry out of range, please select number between one and five')
+
+
+----
+EX03
+----
+
+Create a variable containing an integer between 1 and 10 inclusive.  Ask the user to guess the number.  
+If they guess too high or too low, tell them they have not won.  Tell them they win if they guess the correct number.
+
+# Guess the Number #
+
+# my_number = 13
+#guess = int(input('Guess the number between 1-20:>>> '))
+#if guess == 13:
+	#print ('Congratulations, you guessed my number!')
+#elif guess < 13:
+	#print ('Your guess is too low, try again!')
+#elif guess > 13:
+	#print ('Your guess is too high, try again!')
+#else:
+	#print ('Entry is out of range, please enter a number between 1-20')
+
+
+----
+EX04
+----
+
+Ask the user to input their name.  Check the length of the name.  
+If it is greater than 5 characters long, write a message telling them how many characters,
+otherwise write a message saying the length of their name is a secret.
+
+user_name = input('Type in your name:>>> ')
+user_name_len = len(user_name)
+if user_name_len > 5:
+	print ('The length of your name is ',user_name_len)
+else:
+	print ('The length of your name is a secret!')
+
+----
+EX05
+----
+
+Ask the user for two integers between 1 and 20.  If they are both greater than 15, return their product.
+If only one is greater than 15 return their sum.  If neither are greater than 15 return zero.
+
+#int_01 = int(input('Type in first integer between 1 and 20'))
+#int_02 = int(input('Type in second integer between 1 and 20'))
+
+#if int_01 > 15 and int_02 > 15:
+	#print('The product results in ',int_01*int_02)
+#elif int_01 > 15 and int_02 <= 15 or int_01 <= 15 and int_02 > 15:
+	#print('The sum results in ',int_01+int_02)
+#else:
+	#print(0)
+
+
+int_01 = int(input('Type in first integer between 1 and 20'))
+int_02 = int(input('Type in second integer between 1 and 20'))
+
+if int_01 > 15 and int_02 > 15:
+	print('The product results in ',int_01*int_02)
+elif int_01 > 15 and int_02 <= 15 or int_01 <= 15 and int_02 > 15:
+	print('The sum results in ',int_01+int_02)
+else:
+	print(0)
+
+
+int_01 = int(input('Type in first integer between 1 and 20'))
+int_02 = int(input('Type in second integer between 1 and 20'))
+
+if int_01 > 15 and int_02 > 15:
+	print('The product results in ',int_01*int_02)
+elif int_01 > 15 or int_02 > 15:
+	print('The sum results in ',int_01+int_02)
+else:
+	print(0)
+
+
+----
+EX06
+----
+
+Ask the user for two integers, then swap the contents of the variables.
+So if var_1 = 1 and var_2 = 2 initially, once the code has run, var_1 should equal var_2,
+and var_2 should equal 1.
+
+var_1 = int(input('Type in first integer:>>> '))
+var_2 = int(input('Type in second integer:>>> '))
+print('Before the switch var_1 = ',var_1,'and var_2 = ',var_2)
+var_1,var_2 = var_2,var_1
+print('After the switch var_1 = ',var_1,'and var_2 = ',var_2)
+
+
+
+
+-------------
+LISTS & LOOPS
+-------------
+
+for - loop
+while - loop
+
+#for i in range(10):
+    #print(i)
+
+#for i in range(1,101):
+    #print(i,end=' ')
+
+
+help function:
+
+help(range)
+
+## ASCENDING LIST
+#for i in range(0,101,50):
+    #print(i,end=' ')
+
+## DESCENDING LIST
+#for i in range(100,0,-1):
+    #print(i,end=' ')
+
+word = 'python'    
+for i in word:
+    print(i)
+
+
+-----------------------------
+## A little more on variables
+-----------------------------
+
+
+x = 5
+
+# we are incrementing x by 1
+x= x + 1
+print('x =',x)
+
+# Another 'shorthand' technique to increment a variable
+x += 2
+print('x =',x)
+
+y = x
+print('y =',y)
+
+x += 1
+print('x =',x)
+print('y =',y)
+
+-----------------------------
+## LISTS
+-----------------------------
+
+data = [53,76,25,98,56,42,69,81]
+
+## lists is designated/identified by square brackets only []
+
+## an empty or 'null' list or set is designated by empty square bracket 
+data_1 = []
+
+print(data[2]) #--> prints data located at position_2 on the list above
+
+print(data[0:8]) #--> prints the entire range of list, thus there are 7 elements, 
+	#thus upper bound is total number of elements + 1, or 8.
+	#the 1st number is exclusive, whil the last number or element is inclusive
+
+
+data = [53,76,25,98,56,42,69,81]
+data_1 = []
+#print(data[0])
+#print(data[0:8])
+#print(data[5])
+#print(data[0:5])
+#print(data[-1])
+#print(data[:0])
+
+#for num in data:
+    #print (num,end=' ')
+
+## Sum contents of LISTS
+
+#total = 0
+#for num in data:
+    #total = total + num
+#print('The sum of \'data\' is:',total)
+
+#total = sum(data)
+#print('Total is ',total)
+
+#
+#find_max = 0
+#for num in data:
+    #if num > find_max:
+        #find_max = num
+#print('Max value is',find_max)
+    # the flaw with the above execution is that it will not work with negative/descending list
+
+#print('Max value using Python function \'max()\'is:',max (data))
+#from statistics import mean
+#print('Average value using Python function \'mean()\'is:', mean(data))
+
+#list_01 = [1,11,21,31,41,51]
+#for i in range(5):
+    #print(list_01[i])
+    #print(list_01[i+1])
+
+## Bubble sort
+
+data_copy = data[:]
+for i in range(len(data_copy)):
+    for j in range (0,len(data_copy)-i-1):
+        if data_copy[j] > data_copy[j+1]:
+            data_copy[j],data_copy[j+1] = data_copy[j+1],data_copy[j]
+print(data_copy)
+
+#print(data_copy)
+
+#print(sorted(data))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
